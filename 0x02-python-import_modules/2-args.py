@@ -13,6 +13,6 @@ if __name__ == "__mail__":
         if i >= 1:
             i = 0
             for arg in sys.argv:
-                if I != 0:
+                if i != 0:
                     print("{}: {}".format(i, arg))
                 i += 1
