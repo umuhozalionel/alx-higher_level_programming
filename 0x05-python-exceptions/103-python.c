@@ -7,22 +7,20 @@
  * print_python_float - Printing the informations of the python float
  * @p: pyobject struct address
  */
- 
- void print_python_float(PyObject *p)
- {
-     double d;
-     
-         setbuf(stdout, NULL);
-         printf("[.] float object info\n"
-         if (strcmp(p->ob_type->tp_name, "float"))
-         {
-                 printf(" [ERROR] Invalid Float Object\n");
-                 return;
-         }
-     d = ((PyFloatObject *)p)->ob_fval;
-         printf(" value: %s\n",
-         pyOS_double_to_string(d, 'r', 0, Py_DTSF_ADD_DOT_0, NULL));
- }
+void print_python_float(PyObject *p)
+{
+    double d;
+
+    setbuf(stdout, NULL);
+    printf("[.] float object info\n");
+    if (strcmp(p->ob_type->tp_name, "float"))
+    {
+        printf(" [ERROR] Invalid Float Object\n");
+        return;
+    }
+    d = ((PyFloatObject *)p)->ob_fval;
+    printf("  value: %f\n", d);
+}
 /**
  * print_python_bytes - Printing the informations of the python bytes
  * @p: pyobject struct address
