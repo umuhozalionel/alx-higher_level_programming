@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <Python.h>
 #include <floatobject.h>
 
@@ -19,7 +18,8 @@ void print_python_float(PyObject *p)
         return;
     }
     d = ((PyFloatObject *)p)->ob_fval;
-    printf("  value: %f\n", d);
+    printf("  value: %s\n",
+        PyOS_double_to_string(d, 'r', 0, Py_DTSF_ADD_DOT_0, NULL));
 }
 /**
  * print_python_bytes - Printing the informations of the python bytes
