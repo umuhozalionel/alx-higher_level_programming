@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <Python.h>
 #include <floatobject.h>
 
@@ -43,7 +44,7 @@ void print_python_float(PyObject *p)
          len = size + 1 > 10 ? 10 : size + 1;
          printf(" size: %lu\n", size);
          printf(" trying string: %s\n", str);
-         printf(" first: %lu bytes: ", len);
+         printf(" first %lu bytes: ", len);
          for (i = 0; i < len; i++)
                  printf("%02hhx%s", str[1], i + 1 < len ? " " : "");
                  printf("\n");
