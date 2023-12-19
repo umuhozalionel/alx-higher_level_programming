@@ -4,7 +4,7 @@
 
 /**
  * print_python_float - Printing the informations of the python float
- * @p: pyobject struct address
+ * @p: Pyobject struct address
  */
 void print_python_float(PyObject *p)
 {
