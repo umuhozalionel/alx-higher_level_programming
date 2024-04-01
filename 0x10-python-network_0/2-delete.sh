@@ -1,3 +1,3 @@
 #!/bin/bash
-# sends GET requirements to URL and display response body
-curl -sfL "$1" -X GET
+# sends DELETE req to $1 URL and display response body
+curl -s "$1" -X DELETE
